@@ -1,3 +1,6 @@
 *.aux
 *.gz
 WeeklyTests/Veckotest 1.pdf
+WeeklyTests/homeworkTest.pdf
+WeeklyTests/homeworkTest.tex
+*.out
