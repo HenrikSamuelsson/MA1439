@@ -3,6 +3,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 \usepackage{enumerate}
+\usepackage{tikz}
 \setlength{\parskip}{\baselineskip}%
 \setlength{\parindent}{0pt}%
 
@@ -58,6 +59,30 @@ $x_2 = -1$
 \begin{enumerate}[(a)]
 \item Bestäm eventuella nollställen till funktionen $f(x)=x^2-x+1$.
 \item Skissa grafen.
+\end{enumerate}
+
+\begin{enumerate}[(a)]
+\item 
+Eventuella nollställen hittas genom att sätta $f(x)$ till $0$
+
+$x^2-x+1=0$
+
+Vi använder lösningsformeln för andragradsekvationer.
+
+$x=-\dfrac{1}{2}\pm\sqrt{\dfrac{1}{2}^2-1}=-\dfrac{1}{2}\pm\sqrt{-\dfrac{3}{4}}$
+
+Ekvationen saknar reella rötter vilket betyder att den givna funktionen saknar nollställen.
+
+\item Grafen för funktionen kan ses i figuren nedan
+\begin{tikzpicture}
+	\begin{axis}[
+		xlabel=$x$,
+		ylabel={$f(x) = x^2 - x +4$}
+	]
+	% use TeX as calculator:
+	\addplot {x^2 - x +4};
+	\end{axis}
+\end{tikzpicture}
 \end{enumerate}
 
 \section*{Uppgift 3.}
