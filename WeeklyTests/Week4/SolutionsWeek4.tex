@@ -101,5 +101,19 @@ $ x = \dfrac{100000}{3} $	\tab(exakt lösning)
 $ x = 33333,333$	\tab(närmevärde)
 
 \end{enumerate}
+\section*{Uppgift 3.}
+Lös ekvationen $ 2^x = 10 $ grafiskt.
+
+\textbf{Lösning}
+
+\begin{tikzpicture}
+	\begin{axis}[
+		xlabel=$x$,
+		ylabel={$f(x) = 2^x $}
+	]
+	% use TeX as calculator:
+	\addplot {2^x};
+	\end{axis}
+\end{tikzpicture} 
 
 \end{document}
