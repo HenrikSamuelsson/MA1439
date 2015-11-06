@@ -3,6 +3,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 \usepackage{enumerate}
+\usepackage{url}
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.12}
 \setlength{\parskip}{\baselineskip}%
@@ -171,11 +172,11 @@ $2s^4-8s^2+6=0$
 
 \textbf{Lösning}
 
-Det skulle gå att ersätta $s^2$ med $t$ och sedan ta det där ifrån med allmänna lösningsformeln för andragradsekvationer. Men vi väljer istället att krångla till det lite och använder en allmän metod för fjärdegradsekvationer av Ferrari[1].
+Det skulle gå att ersätta $s^2$ med $t$ och sedan ta det där ifrån med allmänna lösningsformeln för andragradsekvationer. Men vi väljer istället att använda en allmän metod för fjärdegradsekvationer.
 
 Om vi har en given fjärdegradsekvation
 
-$ax^4+bx^3+cx^2+dx+e$
+$ax^4+bx^3+cx^2+dx+e=0$
 
 så börjar man med att beräkna 
 
@@ -185,5 +186,34 @@ $\beta = \dfrac{b^3}{8a^3} - \dfrac{bc}{2a^2} + \dfrac{d}{a}$
 
 $\gamma = -\dfrac{3b^4}{256a^4} + \dfrac{cb^2}{16a^3} - \dfrac{bd}{4a^2} + \dfrac{e}{a}$
 
-[1]Fjärdegradsekvation \url{https://sv.wikipedia.org/wiki/Fj\%C3\%A4rdegradsekvation}
+I vårat fall gäller $a=2$, $b=0$, $c=8$, $d=0$, $e=6$ vilket ger
+
+$\alpha = \dfrac{-8}{2} = -4$
+
+$\beta = 0$
+
+$\gamma = \dfrac{6}{2} = 3$
+
+Att $\beta$ blev $0$ gör att vi direkt vet att 
+
+$x = -\dfrac{b}{4a}\pm_s\sqrt{\dfrac{-\alpha\pm_t\sqrt{\alpha^2-4\gamma}}{2}}$
+
+där $\pm_s$ och $\pm_t$ är oberoende av varandra. Insättning av alla kända värden ger
+
+$x = \dfrac{0}{4\cdot2}\pm_s \sqrt{\dfrac{4 \pm_t \sqrt{(-4)^2-4\cdot3}}{2}} = \pm_s \sqrt{2 \pm_t 1}$
+
+De fyra sökta rötterna till våran ekvationen blir därmed
+
+$x_1 = -1$
+
+$x_2 = -\sqrt{3}$
+
+$x_3 = \sqrt{3}$
+
+$x_4 = 1$
+
+\section*{Referenser}
+[1] Fjärdegradsekvation\\
+ \url{https://sv.wikipedia.org/wiki/Fj\%C3\%A4rdegradsekvation}
+
 \end{document}
