@@ -6,6 +6,8 @@
 \usepackage{url}
 \usepackage{tabto}
 \usepackage{pgfplots}
+\usepackage{tikz}
+\usetikzlibrary{arrows, positioning, calc}
 \pgfplotsset{compat=1.12}
 \setlength{\parskip}{\baselineskip}%
 \setlength{\parindent}{0pt}%
@@ -109,10 +111,28 @@ Lös ekvationen $ 2^x = 10 $ grafiskt.
 \begin{tikzpicture}
 	\begin{axis}[
 		xlabel=$x$,
-		ylabel={$f(x) = 2^x $}
+		ylabel={$f(x) = 2^x $},
+ 		grid = major,
+        grid style={dashed, gray!30},
+          %xmode=log,log basis x=10,
+        %ymode=log,log basis y=10,	
+		xmin=0,     % start the diagram at this x-coordinate
+        xmax=5,    % end   the diagram at this x-coordinate
+        ymin=0,     % start the diagram at this y-coordinate
+        ymax=16,   % end   the diagram at this y-coordinate
 	]
-	% use TeX as calculator:
-	\addplot {2^x};
+	
+	
+	
+    
+    % use TeX as calculator:
+	\addplot [mark = none, thick]{2^x}; 
+	
+	% mark x=3.32193
+      \coordinate (a) at (axis cs:3.32193, 10);
+      \draw[blue, dashed, thick](a -| current plot begin) -- (a);
+      \draw[blue, dashed, thick](a |- current plot begin) -- (a);
+      
 	\end{axis}
 \end{tikzpicture} 
 
