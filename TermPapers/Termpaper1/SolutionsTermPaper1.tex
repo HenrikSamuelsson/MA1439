@@ -187,4 +187,61 @@ Lös ekvationen
 \[
 (3x^2 - 16x - 35)(x + \dfrac{2}{5})(x^2-4)=0
 \]
+
+\textbf{Lösning}
+Vi noterar att om man skulle multiplicera ihop alla faktorerna så blir det någon form a femtegrads-ekvation. Det finns dock ingen allmän lösningsformel för femtegrads-ekvationer, som det till exempel finns för andragradsekvationer.
+
+Vi väljer därför istället att faktorisera ner samtliga faktorer i ekvationen till fem stycken förstagrads-ekvationer. Om alla dessa förstagrads-ekvationerna är olika så kan vi lätt plocka fram alla lösningar till ekvationen eftersom en produkt är noll om och endast om minst en av de ingående faktorerna är noll.
+
+Första uttrycket som måste faktoriseras är 
+\[
+3x^2 - 16x - 35 = 3(x^2 - \dfrac{16}{3}x - \dfrac{35}{3})
+\]
+Vi behöver därmed lösa andragrads-ekvationen
+\[
+x^2 - \dfrac{16}{3} - \dfrac{35}{3} = 0 
+\]
+Vi kan lösa denna ekvation med allmänna lösningsformeln för andragrads-ekvationer enligt nedan
+\[
+x = \dfrac{16}{3 \cdot 2} \pm \sqrt{\left(\dfrac{16}{3 \cdot 2}\right) ^2+\dfrac{35}{3}} 
+= \dfrac{8}{3} \pm \sqrt{\dfrac{64}{9}+\dfrac{105}{9}}
+= \dfrac{8}{3} \pm \dfrac{13}{3}
+\]
+Som ger
+\[
+x_1 = \dfrac{8+13}{3} = \dfrac{21}{3} = 7
+\]
+\[
+x_2 = \dfrac{8-13}{3} = -\dfrac{5}{3}
+\]
+Det vill säga att
+\[
+3x^2 - 16x - 35 = 3(x - 7)(x + \dfrac{5}{3})
+\]
+Vi återgår nu till den givna ursprungs-ekvationen och noterar att andra faktorn är redan på den form vi vill ha den. Däremot så är sista termen en andragradsekvation som vi ska faktorisera. Vi ser direkt att det är bara att använda konjugatregeln i detta fallet
+\[
+x^2 - 4=(x-2)(x+2)
+\]
+Vi vet därmed att en alternativ form för den givna ursprungsekvationen är
+\[
+3(x-7)(x + \dfrac{5}{3})(x + \dfrac{2}{5})(x - 2)(x + 2) = 0
+\]
+Man kan nu se att det finns fem olika x som satisfierar ekvationen och dessa värden listas i svaret nedan.
+
+\textbf{Svar}
+\[
+x_1 = 7 
+\]
+\[
+x_2 = -\dfrac{5}{3} 
+\]
+\[
+x_3 = -\dfrac{2}{5} 
+\]
+\[
+x_4 = 2
+\]
+\[
+x_5 = -2
+\]
 \end{document}
