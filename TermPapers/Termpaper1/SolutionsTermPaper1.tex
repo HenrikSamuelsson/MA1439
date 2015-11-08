@@ -5,6 +5,13 @@
 \usepackage{enumerate}
 \usepackage{fancyhdr}
 \usepackage{empheq}
+
+%plotting
+\usepackage{pgfplots}
+\usepackage{tikz}
+\usetikzlibrary{arrows, positioning, calc}
+\pgfplotsset{compat=1.12}
+
 \setlength{\parskip}{\baselineskip}%
 \setlength{\parindent}{0pt}%
 
@@ -112,9 +119,67 @@ x = 1, y = 2, z = 3
 \newpage
 
 \section*{Uppgift 3.}
+
 \begin{enumerate}[(a)]
-\item En andragradskurva har en minimipunkt då x = 5. Kurvan skär x-axeln då x = 7 och då x = a. Vilket är talet a?
-\item Finn ett uttryck för en andragrads-funktion som uppfyller kraven i a-uppgiften.
+\item En andragrads-kurva har en minimipunkt då x = 5. Kurvan skär x-axeln då x = 7 och då x = a. Vilket är talet a?
+\item Finn ett uttryck för en andragrads-funktion som uppfyller kraven från första delen av uppgiften.
+\end{enumerate}
+
+\textbf{Lösning}
+\begin{enumerate}[(a)]
+\item
+Vi har tre olika värden på x-axeln att hålla reda på i den här uppgiften. Låt oss kalla dessa värden $x_v$, $x_b$ och $x_a$.
+
+$x_v = 5$ kurvan har här sin minimipunkt, det vill säga kurvan vänder av uppåt på båda sidor av detta värde på x-axeln.
+
+$x_b = 7$ kurvan skär här x-axeln.
+
+$x_a = a$ detta är den andra platsen som kurvan skär x-axeln och det värde som vi söker.
+
+Eftersom $x_v$ är mindre än $x_b$ och så måste minimipunkten ligga under x-axeln, vi vet ju att kurvan vänder uppåt på båda sidor av minimipunkten. Vi vet därmed också att den saknade skärningspunkten med x-axeln ligger till höger om både $x_v$ och $x_b$.
+
+Den sista pusselbit som vi behöver är det faktum att andragradskurvor är symmetriska. Det betyder att avståndet mellan $x_v$ och $x_b$ är lika stort som det kända avståndet mellan $x_v$ och $x_b$ det vill säga 2.
+
+Vi således att $x_a = 5 - 2 = 3$.
+
+\textbf{Svar}
+
+Talet a är 3. 
+
+\item
+Vi vet från första delen av uppgiften att andragradsfunktionen är noll när x är 3 och när x är 7. Det vill säga funktionen kan skrivas som
+\[
+f(x) = (x-3)(x-7) = x^2 - 7x - 3x + 21 = x^2 - 10x + 21  
+\]
+Vi plottar en graf av funktionen för att kontrollera att vi har tänkt rätt.
+
+\begin{tikzpicture}
+	\begin{axis}[
+	 	width=0.8\textwidth,
+		xlabel=$x$,
+		ylabel={$f(x) = x^2 - 10x + 21 $},
+		domain=2:8,
+ 		grid = major,
+        grid style={dashed, gray!30},
+		xmin=2,     % start the diagram at this x-coordinate
+        xmax=8,    % end   the diagram at this x-coordinate
+        ymin=-5,     % start the diagram at this y-coordinate
+        ymax=5,   % end   the diagram at this y-coordinate
+	]
+    % use TeX as calculator:
+	\addplot [mark = none, red ,thick]{x^2 - 10*x + 21}; 
+	\end{axis}
+\end{tikzpicture} 
+
+Ser korrekt ut, grafen skär x-axeln vid $x=3$ och $x=7$ och minimipunkten inträffar då $x=5$.
+
+\textbf{Svar}
+\[
+f(x) = x^2 - 10x + 21
+\]
+
+\newpage
+
 \end{enumerate}
 
 \end{document}
