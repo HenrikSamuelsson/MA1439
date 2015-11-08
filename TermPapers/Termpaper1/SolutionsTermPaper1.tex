@@ -4,12 +4,13 @@
 \usepackage{graphicx}
 \usepackage{enumerate}
 \usepackage{fancyhdr}
+\usepackage{empheq}
 \setlength{\parskip}{\baselineskip}%
 \setlength{\parindent}{0pt}%
 
 \pagestyle{fancy}
 \fancyhf{}
-\rhead{Henrik Samuelsson 7304294973}
+\rhead{Henrik Samuelsson, 7304294973}
 \lhead{Lösning av Inlämningsuppgift}
 
 \begin{document}
@@ -46,16 +47,68 @@ Det förenklade uttrycket blir $(x-3)(x-1)$
 \section*{Uppgift 2.}
 
 Lös ekvationssystemet
-\begin{equation}
-x + y + 2z = 9
-\end{equation}
-\begin{equation}
-3x - y + z = 4
-\end{equation}
-\begin{equation}
-x - 2y - 3z = -12
-\end{equation}
+\begin{empheq}[left = \empheqlbrace]{align}
+&x + y + 2z = 9\\
+&3x - y + z = 4\\
+&x - 2y - 3z = -12
+\end{empheq}
 
 \textbf{Lösning}
+
+Vi vill i ett första steg få ner ekvationssystemet till ett system med två ekvationer och två obekanta. Vi väljer att använda additionsmetoden för att få bort y ur ekvationssystemet.
+ 
+Addera ekvation (1) med ekvation (2)
+\[
+x + y + 2z + 3x - y + z = 9 + 4
+\]
+\[
+4x + 3z = 13
+\]
+
+Addera ekvation (3) med ekvation (2) multiplicerad med -2
+\[
+x - 2y - 3z - 6x + 2y - 2z = -12 - 2 \cdot 4 
+\]
+\[
+-5x - 5z = -20
+\]
+\[
+x + z = 4
+\]
+
+Vi har nu ett nytt mindre ekvationssystem
+\begin{empheq}[left = \empheqlbrace]{align}
+&4x + 3z = 13\\
+&x + z = 4
+\end{empheq} 
+
+Addera ekvation (4) med ekvation (5) multiplicerad med -3
+\[
+4x + 3z -3x -3z = 13 -3 \cdot 4
+\]
+\[
+x = 1
+\]
+Vi vet att x är 1 och använder detta i ekvation (5) för att få fram vad z är
+\[
+1 + z = 4
+\]
+\[
+z = 3
+\]
+Nu vet vi att x är 1 och z är 3 och använder detta i ekvation (1) för att får fram vad y är
+\[
+1 + y + 2 \cdot 3 = 9
+\]
+\[
+y = 2
+\]
+Vi har därmed löst hela det ursprungliga ekvationssystemet.
+
+\textbf{Svar}
+
+x = 1, y = 2, z = 3
+
+\newpage
 
 \end{document}
