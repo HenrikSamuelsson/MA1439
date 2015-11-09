@@ -182,8 +182,76 @@ f(x) = x^2 - 10x + 21
 
 \newpage
 \section*{Uppgift 4.}
-En linje genom punkten (2,0) bildar tillsammans med x-axeln och linjen $2x-y+8=0$ en triangel med arean 54 areaenheter. Bestäm linjens ekvation då triangeln ligger ovanför x-axeln.
+En linje genom punkten (2, 0) bildar tillsammans med x-axeln och linjen\\
+ $2x-y+8=0$ en triangel med arean 54 areaenheter. Bestäm linjens ekvation då triangeln ligger ovanför x-axeln.
 
+\textbf{Lösning}
+
+Vi börjar med att ta reda på basen av den triangel som bildas. Vi vet att ena ändpunkten av den linje som bildar basen är (2, 0). Punkten i andra änden av baslinjen är samma punkt som den givna linjen skär x-axeln. Alltså gäller för denna punkt att y är 0 och x-koordinaten kan fås fram ur den givna linjens ekvation.
+\[
+2x - 0 + 8 = 0
+\]
+\[
+x = -4
+\]
+Det vill säga triangelns baslinje går mellan punkterna (-4, 0) och (2, 0) och längden av basen är således 6 längdenheter.
+
+Arean av en triangel ges av basen gånger höjden genom två. Vi vet basen av våran triangel och kan därför räkna ut höjden
+\[
+h = \dfrac{2a}{b} = \dfrac{2 \cdot 54}{6} = 18 
+\]
+Vi därmed att den givna linjen och den linje vi söker skär varandra i en punkt där y-koordinaten är 18. Vi saknar motsvarande x-koordinat men kan räkna ut den med hjälp av ekvationen för den givna linjen.
+\[
+2x - 18 + 8 = 0
+\]
+\[
+x = 5
+\]
+Vi vet nu att den sökta linjen går genom punkten (5, 18) då vi redan vet att linjen går genom punkten (2, 0) så är det nu möjligt att räkna ut lutningen för den sökta linjen.
+\[
+k = \dfrac{y_1 - y_2}{x_1 - x_2} = \dfrac{0 - 18}{2 - 5} = 6
+\]
+Linjen vi söker är alltså på formen
+\[
+y = 6x + m
+\]
+Vi saknar nu bara m som är skärningen med y-axeln. Vi sätter in punkten (2, 0) i linjens ekvation och löser ut m.
+\[
+0 = 6 \cdot 2 + m
+\]
+\[
+m = -12
+\]
+Linjen vi söker har alltså ekvationen
+\[
+y = 6x - 12
+\]
+Vi kontrollerar rimligheten av resultatet genom att plotta båda linjerna med en dator eller miniräknare. En sådan plot kan ses i figuren nedan. Ser korrekt ut så vitt vi kan bedöma. Den röda linjen är den sökta linjen och man kan se att den går genom den givna punkten. De båda linjerna bildar en triangel. Man kan även skatta arean genom att räkna att det ryms ungefär 14 rutor i triangeln där varje ruta är 4 areaenheter. Det vill säga totalt 56 areaenheter vilket stämmer rätt bra överens med värdet av den givna arean.
+
+\begin{tikzpicture}
+	\begin{axis}[
+	 	width=0.8\textwidth,
+		xlabel=$x$,
+		ylabel={$y$},
+		domain=-10:10,
+ 		grid = major,
+        grid style={dashed, gray!30},
+        ytick={0,2,...,20},
+    	xtick={-10,-8,...,10},
+		xmin=-10,     % start the diagram at this x-coordinate
+        xmax=10,    % end   the diagram at this x-coordinate
+        ymin=0,     % start the diagram at this y-coordinate
+        ymax=20,   % end   the diagram at this y-coordinate
+	]
+    % use TeX as calculator:
+	\addplot [mark = none, red ,thick]{6*x-12};
+	\addplot [mark = none, blue ,thick]{2*x+8};
+	\end{axis}
+\end{tikzpicture}
+
+\textbf{Svar}
+Den sökta linjens ekvation är $y = 6x - 12$
+ 
 \newpage
 \section*{Uppgift 5.}
 
