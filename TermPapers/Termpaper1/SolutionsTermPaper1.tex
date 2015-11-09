@@ -30,7 +30,7 @@
 \end{titlepage}
 
 \section*{Uppgift 1.}
-Förenkla nedanstående uttryck så långt det går
+Förenkla nedanstående uttryck så långt det går.
 \[
 \dfrac{x^2 - 9}{x - 1} \cdot \dfrac{x^2 - 2x + 1}{x + 3}
 \]
@@ -41,7 +41,7 @@ Börja med skriva om uttrycket genom att  faktorisera de båda täljarna. Vi anv
 \[
 \dfrac{(x + 3)(x-3)}{x - 1} \cdot \dfrac{(x-1)^2}{x + 3}
 \]
-Det går nu att eliminera båda nämnarna i uttrycket genom att stryka mot motsvarande termer i täljarna. Vi får kvar följande förenklade uttryck
+Det går nu att eliminera båda nämnarna i uttrycket genom att stryka mot motsvarande termer i täljarna. Vi får kvar följande förenklade uttryck.
 \[
 $(x-3)(x-1)$
 \]
@@ -83,7 +83,7 @@ x - 2y - 3z - 6x + 2y - 2z = -12 - 2 \cdot 4
 x + z = 4
 \]
 
-Vi har nu ett nytt mindre ekvationssystem
+Vi har nu ett nytt mindre ekvationssystem som vi ska lösa.
 \begin{empheq}[left = \empheqlbrace]{align}
 &4x + 3z = 13\\
 &x + z = 4
@@ -96,14 +96,14 @@ Addera ekvation (4) med ekvation (5) multiplicerad med -3
 \[
 x = 1
 \]
-Vi vet att x är 1 och använder detta i ekvation (5) för att få fram vad z är
+Vi vet att x är 1 och använder detta i ekvation (5) för att få fram vad z är.
 \[
 1 + z = 4
 \]
 \[
 z = 3
 \]
-Nu vet vi att x är 1 och z är 3 och använder detta i ekvation (1) för att får fram vad y är
+Nu vet vi att x är 1 och z är 3 och använder detta i ekvation (1) för att får fram vad y är.
 \[
 1 + y + 2 \cdot 3 = 9
 \]
@@ -113,9 +113,9 @@ y = 2
 Vi har därmed löst hela det ursprungliga ekvationssystemet.
 
 \textbf{Svar}
-
+\[
 x = 1, y = 2, z = 3
-
+\]
 \newpage
 
 \section*{Uppgift 3.}
@@ -130,17 +130,20 @@ x = 1, y = 2, z = 3
 \item
 Vi har tre olika värden på x-axeln att hålla reda på i den här uppgiften. Låt oss kalla dessa värden $x_v$, $x_b$ och $x_a$.
 
-$x_v = 5$ kurvan har här sin minimipunkt, det vill säga kurvan vänder av uppåt på båda sidor av detta värde på x-axeln.
+$x_v$ är 5, kurvan har här sin minimipunkt, det vill säga kurvan vänder av uppåt på båda sidor av detta värde på x-axeln.
 
-$x_b = 7$ kurvan skär här x-axeln.
+$x_b$ är 7, kurvan skär här x-axeln.
 
-$x_a = a$ detta är den andra platsen som kurvan skär x-axeln och det värde som vi söker.
+$x_a$ är okänd, detta är den andra platsen som kurvan skär x-axeln och det värde som vi söker.
 
 Eftersom $x_v$ är mindre än $x_b$ och så måste minimipunkten ligga under x-axeln, vi vet ju att kurvan vänder uppåt på båda sidor av minimipunkten. Vi vet därmed också att den saknade skärningspunkten med x-axeln ligger till höger om både $x_v$ och $x_b$.
 
 Den sista pusselbit som vi behöver är det faktum att andragradskurvor är symmetriska. Det betyder att avståndet mellan $x_v$ och $x_b$ är lika stort som det kända avståndet mellan $x_v$ och $x_b$ det vill säga 2.
 
-Vi således att $x_a = 5 - 2 = 3$.
+Vi således att
+\[
+x_a = 5 - 2 = 3
+\]
 
 \textbf{Svar}
 
@@ -151,7 +154,7 @@ Vi vet från första delen av uppgiften att andragradsfunktionen är noll när x
 \[
 f(x) = (x-3)(x-7) = x^2 - 7x - 3x + 21 = x^2 - 10x + 21  
 \]
-Vi plottar en graf av funktionen för att kontrollera att vi har tänkt rätt.
+Vi låter en dator eller miniräknare plotta en graf av funktionen för att kontrollera att vi har tänkt rätt, se följande figur.
 
 \begin{tikzpicture}
 	\begin{axis}[
@@ -200,7 +203,7 @@ Arean av en triangel ges av basen gånger höjden genom två. Vi vet basen av v�
 \[
 h = \dfrac{2a}{b} = \dfrac{2 \cdot 54}{6} = 18 
 \]
-Vi därmed att den givna linjen och den linje vi söker skär varandra i en punkt där y-koordinaten är 18. Vi saknar motsvarande x-koordinat men kan räkna ut den med hjälp av ekvationen för den givna linjen.
+Vi vet därmed att den givna linjen och den linje vi söker skär varandra i en punkt där y-koordinaten är 18. Vi saknar motsvarande x-koordinat men kan räkna ut den med hjälp av ekvationen för den givna linjen.
 \[
 2x - 18 + 8 = 0
 \]
@@ -215,7 +218,8 @@ Linjen vi söker är alltså på formen
 \[
 y = 6x + m
 \]
-Vi saknar nu bara m som är skärningen med y-axeln. Vi sätter in punkten (2, 0) i linjens ekvation och löser ut m.
+Vi saknar nu bara m som är skärningen med y-axeln. Vi sätter in punkten\\
+(2, 0) i linjens ekvation och löser ut m.
 \[
 0 = 6 \cdot 2 + m
 \]
@@ -233,7 +237,7 @@ Vi kontrollerar rimligheten av resultatet genom att plotta båda linjerna med en
 	 	width=0.8\textwidth,
 		xlabel=$x$,
 		ylabel={$y$},
-		domain=-10:10,
+		domain=-10:10, 
  		grid = major,
         grid style={dashed, gray!30},
         ytick={0,2,...,20},
@@ -261,7 +265,7 @@ Lös ekvationen
 \]
 
 \textbf{Lösning}
-Vi noterar att om man skulle multiplicera ihop alla faktorerna så blir det någon form a femtegrads-ekvation. Det finns dock ingen allmän lösningsformel för femtegrads-ekvationer, som det till exempel finns för andragradsekvationer.
+Vi noterar att om man skulle multiplicera ihop alla faktorerna så blir det någon form a femtegrads-ekvation. Det finns dock ingen allmän lösningsformel för femtegrads-ekvationer, som det till exempel finns för andragradsekvationer. Vi måste därför använda någon annan metodik för att lösa problemet.
 
 Vi väljer att faktorisera ner samtliga faktorer i ekvationen till fem stycken förstagrads-ekvationer. Om alla dessa förstagrads-ekvationerna är olika så kan vi lätt plocka fram alla lösningar till ekvationen eftersom en produkt är noll om och endast om minst en av de ingående faktorerna är noll.
 
